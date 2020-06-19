@@ -143,7 +143,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li class='has-children'><a href='網管.html'>網管</a><ul class='dropdown'><li><a href='Week 2.html'>Week 2</a><li><a href='Week 3.html'>Week 3</a><li><a href='Week 4.html'>Week 4</a><li><a href='Week 5.html'>Week 5</a><li><a href='Week 6.html'>Week 6</a><li><a href='Week 7.html'>Week 7</a><li><a href='Week 8.html'>Week 8</a><li><a href='Week 9.html'>Week 9</a><li><a href='Week 11.html'>Week 11</a><li><a href='Week 12.html'>Week 12</a><li><a href='Week 13.html'>Week 13</a><li><a href='Week 14.html'>Week 14</a><li class='has-children'><a href='Week 15.html'>Week 15</a><ul class='dropdown'><li><a href='About.html'>About</a></li></ul><li><a href='Week 16-18.html'>Week 16-18</a></li></ul><li><a href='爪與尾的印記.html'>爪與尾的印記</a></li>
+                     <li class='has-children'><a href='網管.html'>網管</a><ul class='dropdown'><li><a href='Week 2.html'>Week 2</a><li><a href='Week 3.html'>Week 3</a><li><a href='Week 4.html'>Week 4</a><li><a href='Week 5.html'>Week 5</a><li><a href='Week 6.html'>Week 6</a><li><a href='Week 7.html'>Week 7</a><li><a href='Week 8.html'>Week 8</a><li><a href='Week 9.html'>Week 9</a><li><a href='Week 12.html'>Week 12</a><li><a href='Week 13.html'>Week 13</a><li><a href='Week 14.html'>Week 14</a><li class='has-children'><a href='Week 15.html'>Week 15</a><ul class='dropdown'><li><a href='About.html'>About</a></li></ul><li><a href='Week 16-18.html'>Week 16-18</a></li></ul><li><a href='爪與尾的印記.html'>爪與尾的印記</a><li><a href='往生咒.html'>往生咒</a><li><a href='六字大明咒.html'>六字大明咒</a><li><a href='心得.html'>心得</a></li>
                       </ul>
                 </nav>
               </div>
@@ -154,7 +154,7 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Week 8 << <a href='Week 8.html'>Previous</a> <a href='Week 11.html'>Next</a> >> Week 11<br /><h1>Week 9</h1>
+    <div id="tipue_search_content">Week 8 << <a href='Week 8.html'>Previous</a> <a href='Week 12.html'>Next</a> >> Week 12<br /><h1>Week 9</h1>
 <h4>電腦硬體架構</h4>
 <p>主機螢幕周邊</p>
 <p>主機:</p>
@@ -172,8 +172,243 @@ img.add_border {
 <p>PC 個人電腦</p>
 <p>Microcontroler 微控制器</p>
 <p>Mobile Phone 智慧型手機</p>
-<p><br/><br/><br/><br/><br/><strong>Week 10</strong></p>
-<br />Week 8 << <a href='Week 8.html'>Previous</a> <a href='Week 11.html'>Next</a> >> Week 11</div>
+<br/><br/><br/><br/><br/><br/><strong>W</strong><strong>eek 10</strong>
+<br/><strong></strong><strong>Week 11</strong>
+<h4>以 SSH 維護倉儲</h4>
+<p>由於在電腦教室時採用純 IPv6 協定上網, 因此為了能夠在近端將倉儲改版資料推送到目前只接受 IPv4 協定連線的 github, 以下除了將原本以 https 對 github 連線, 改為以 ssh 協定連線外, 在 Windows 環境下必須利用 putty 與 plink, 設定 putty 格式的 .ppk 以及能夠同時支援 IPv4 與 IPv6 的代理主機.</p>
+<p>設定步驟如下:</p>
+<p>1. 下載 Putty 工具組</p>
+<p>從 <a data-saferedirecturl="https://www.google.com/url?q=https://www.chiark.greenend.org.uk/~sgtatham/putty/&amp;source=gmail&amp;ust=1592028178600000&amp;usg=AFQjCNHvWous0it2JZmz8XZH0UBpcQC23A" href="https://www.chiark.greenend.org.uk/~sgtatham/putty/" rel="nofollow" target="_blank">https://www.chiark.greenend.<wbr/>org.uk/~sgtatham/putty/</a> 下載一般版, 或從 <a data-saferedirecturl="https://www.google.com/url?q=http://jakub.kotrla.net/putty/&amp;source=gmail&amp;ust=1592028178600000&amp;usg=AFQjCNEvYue9MyxNpuqLXlPIvXJmQgJnIQ" href="http://jakub.kotrla.net/putty/" rel="nofollow" target="_blank">http://jakub.kotrla.net/<wbr/>putty/</a> 下載特殊的可攜版本.</p>
+<p>2. 利用 y:\portablegit\bin\sh.exe 進入 shell 命令環境後, 以 </p>
+<div>
+<div id="m_-4017000464414909426m_-2018323386028382460gmail-highlighter_743182">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td>
+<div>1</div>
+</td>
+<td>
+<div>
+<div><code>ssh-keygen -t rsa -b 4096 -C </code><code>"使用者學號"</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>在 /y/home/.ssh 目錄下建立 id_rsa 與 id_rsa.pub 等 private key 與 public key</p>
+<p>之後以 SciTE 開啟 id_rsa.pub 後, 將此 public key 的內容, 以新增添加到 Github.com 帳號下 personal settings -&gt; SSH and GPG keys 頁面下.</p>
+<p>3. 接下來要利用 puttygen.exe 將 id_rsa 轉為 Putty 可以解讀的 .ppk 格式, 並修改隨身系統的啟動批次檔案, 指定利用 putty 目錄下的 plink 執行 git 指令的網路代理設定.</p>
+<div>
+<div id="m_-4017000464414909426m_-2018323386028382460gmail-highlighter_905412">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+</td>
+<td>
+<div>
+<div><code>修改啟動的 start.bat 加入下列設定:</code></div>
+<div> </div>
+<div><code>set GIT_HOME=%Disk%:\portablegit\<wbr/>bin\</code></div>
+<div><code>set GIT_SSH=%Disk%:\putty\plink.<wbr/>exe</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>4. 利用 puttygen.exe 載入第二步驟所建立的 private key, 也就是 id_rsa.</p>
+<p>開啟 puttygen 之後, 以右下方的 load 載入 id_rsa, 成功載入後, 利用 save private key 按鈕, 將已經轉為 putty 格式的 .ppk 存檔. 此一 .ppk 檔案必須在設定 putty 中<span> </span><a data-saferedirecturl="https://www.google.com/url?q=http://github.com&amp;source=gmail&amp;ust=1592028178600000&amp;usg=AFQjCNGty0WbkUSUIL4SfMCDrSSF5TtWjA" href="http://github.com/" target="_blank">github.com</a><span> </span>session 時, 在 Connection-&gt;SSH-&gt;Auth 項目下, 將轉檔後的 .ppk 指向 private key file for authentication 欄位. </p>
+<p>並在 Connection-&gt;Proxy 項目下, 指定 Proxy type: HTTP, 並將 IPv6 代理主機設為 ::53 或 ::42 埠號設為 3128.</p>
+<p>5. 之後確定 home 下的 .ssh 目錄中的 config 設定檔案為:</p>
+<div>
+<div id="m_-4017000464414909426m_-2018323386028382460gmail-highlighter_94557">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+<div>6</div>
+<div>7</div>
+<div>8</div>
+<div>9</div>
+<div>10</div>
+<div>11</div>
+<div>12</div>
+<div>13</div>
+<div>14</div>
+<div>15</div>
+<div>16</div>
+<div>17</div>
+<div>18</div>
+</td>
+<td>
+<div>
+<div><code># no proxy at home</code></div>
+<div><code>#ProxyCommand y:/PortableGit/mingw64/bin/<wbr/>connect.exe -H<span> </span><a data-saferedirecturl="https://www.google.com/url?q=http://proxy.mde.nfu.edu.tw:3128&amp;source=gmail&amp;ust=1592028178600000&amp;usg=AFQjCNGPqfX6s9Km91J2BBY8MpWRXXrTPA" href="http://proxy.mde.nfu.edu.tw:3128/" target="_blank">proxy.mde.nfu.edu.tw:3128</a><span> </span>%h %p</code></div>
+<div><code># set git_ssh=y:/putty/plink.exe with auth under putty<span> </span><a data-saferedirecturl="https://www.google.com/url?q=http://github.com&amp;source=gmail&amp;ust=1592028178600000&amp;usg=AFQjCNGty0WbkUSUIL4SfMCDrSSF5TtWjA" href="http://github.com/" target="_blank">github.com</a><span> </span>session setup</code></div>
+<div><code>ProxyCommand y:/putty/plink.exe<span> </span><a data-saferedirecturl="https://www.google.com/url?q=http://github.com&amp;source=gmail&amp;ust=1592028178600000&amp;usg=AFQjCNGty0WbkUSUIL4SfMCDrSSF5TtWjA" href="http://github.com/" target="_blank">github.com</a><span> </span>%h %p</code></div>
+<div><code> </code> </div>
+<div><code>Host<span> </span><a data-saferedirecturl="https://www.google.com/url?q=http://github.com&amp;source=gmail&amp;ust=1592028178600000&amp;usg=AFQjCNGty0WbkUSUIL4SfMCDrSSF5TtWjA" href="http://github.com/" target="_blank">github.com</a></code></div>
+<div><code>    </code><code>User git</code></div>
+<div><code>    </code><code>Port 22</code></div>
+<div><code>    </code><code>Hostname<span> </span><a data-saferedirecturl="https://www.google.com/url?q=http://github.com&amp;source=gmail&amp;ust=1592028178600000&amp;usg=AFQjCNGty0WbkUSUIL4SfMCDrSSF5TtWjA" href="http://github.com/" target="_blank">github.com</a></code></div>
+<div><code>    </code> </div>
+<div><code>    </code><code># for connect.exe need openssh key format</code></div>
+<div><code>    </code><code>#IdentityFile "y:\home\.ssh\id_rsa_<wbr/>mdecourse"</code></div>
+<div><code>    </code><code># for plink.exe need rsa key format but set under putty<span> </span><a data-saferedirecturl="https://www.google.com/url?q=http://github.com&amp;source=gmail&amp;ust=1592028178600000&amp;usg=AFQjCNGty0WbkUSUIL4SfMCDrSSF5TtWjA" href="http://github.com/" target="_blank">github.com</a><span> </span>session</code></div>
+<div><code>    </code><code># plink.exe do not need the following setting</code></div>
+<div><code>    </code><code>#IdentityFile "y:\home\.ssh\mdecourse_putty_<wbr/>private.ppk"</code></div>
+<div><code> </code> </div>
+<div><code>    </code><code>TCPKeepAlive yes</code></div>
+<div><code>    </code><code>IdentitiesOnly yes</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>6. 最後再將 wcmj2020 倉儲中 .git 目錄下的 config 檔案中的連線協定, 由 https 改為採 ssh 連線: 範例如下:</p>
+<div>
+<div id="m_-4017000464414909426m_-2018323386028382460gmail-highlighter_565759">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+<div>6</div>
+<div>7</div>
+<div>8</div>
+<div>9</div>
+<div>10</div>
+<div>11</div>
+<div>12</div>
+<div>13</div>
+<div>14</div>
+<div>15</div>
+<div>16</div>
+<div>17</div>
+<div>18</div>
+</td>
+<td>
+<div>
+<div><code>[core]</code></div>
+<div><code>    </code><code>repositoryformatversion = 0</code></div>
+<div><code>    </code><code>filemode = </code><code>false</code></div>
+<div><code>    </code><code>bare = </code><code>false</code></div>
+<div><code>    </code><code>logallrefupdates = </code><code>true</code></div>
+<div><code>    </code><code>symlinks = </code><code>false</code></div>
+<div><code>    </code><code>ignorecase = </code><code>true</code></div>
+<div><code>[submodule]</code></div>
+<div><code>    </code><code>active = .</code></div>
+<div><code>[remote </code><code>"origin"</code><code>]</code></div>
+<div><code>    </code><code>#url =<span> </span><a data-saferedirecturl="https://www.google.com/url?q=https://github.com/mdecourse/wcmj2020.git&amp;source=gmail&amp;ust=1592028178600000&amp;usg=AFQjCNF0C9NPrDvN5vq1enHC9hSq0zMazA" href="https://github.com/mdecourse/wcmj2020.git" target="_blank">https://github.com/mdecourse/<wbr/>wcmj2020.git</a></code></div>
+<div><code>    </code><code>url = git@github.com:mdecourse/<wbr/>wcmj2020.git</code></div>
+<div><code>    </code><code>fetch = +refs/heads/*:refs/remotes/<wbr/>origin/*</code></div>
+<div><code>[branch </code><code>"master"</code><code>]</code></div>
+<div><code>    </code><code>remote = origin</code></div>
+<div><code>    </code><code>merge = refs/heads/master</code></div>
+<div><code>[submodule </code><code>"cmsimde"</code><code>]</code></div>
+<div><code>    </code><code>url = https:</code><code>//<a data-saferedirecturl="https://www.google.com/url?q=http://github.com/mdecourse/cmsimde.git&amp;source=gmail&amp;ust=1592028178600000&amp;usg=AFQjCNFmmYjQNtpRbubBJhZ723jheRzAiA" href="http://github.com/mdecourse/cmsimde.git" target="_blank">github.com/mdecourse/<wbr/>cmsimde.git</a></code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>之後就可以透過近端的 .ppk private key 與 Github.com 上的 public key 對應, 無需輸入帳號密碼就可以進行 git push.</p>
+<p><br/><br/>Blogger API</p>
+<p>基本概念:</p>
+<p>1. 這裡所指的 Blogger API 為: <a data-saferedirecturl="https://www.google.com/url?q=https://developers.google.com/blogger/docs/3.0/using&amp;source=gmail&amp;ust=1592028178600000&amp;usg=AFQjCNHlgDFbWIFewbqXKIUwaZPAezB5vg" href="https://developers.google.com/blogger/docs/3.0/using" target="_blank">https://developers.google.<wbr/>com/blogger/docs/3.0/using</a></p>
+<p>2. 將 CMSiMDE 中的 Pelican Blog 內容同步到 Google Blogger 的目的, 在讓網際內容管理系統中的網誌原始資料修改過程具備版次, 而且可同時將網誌出版在 Github Pages 與 Google Blogger 中, 讓網際內容的保存較具有永續性.</p>
+<p>3. Google Blogger 中的網誌系統各有獨立 ID, 這裡稱為 blog_id, 而網誌中的每一篇文章各有獨立 ID, 這裡稱為 post_id.</p>
+<p>4. Google Blogger 管理者登入後, 在 Settings - Permissions 項下, 允許 invite more authors, 而且在 Settings - Permissions - Blog admins and Authors 項下, 允許將所邀請共同寫作的 Author 提升為 Admin 管理者.</p>
+<p>5. Google 的每一個 API 都允許使用者建立以 Oauth2 為基礎的登入使用授權憑證, 配合所啟動的各種 API 程式庫, 一旦啟用並登入後, 可以透過程式方法, 呼叫程式庫功能, 對各種 Google 所提供的服務 (Blogger, Drive, Gmail, Calendar 等) 新增內容. 以 Blogger 而言, 只要使用者被設為某一網誌的共同作者, 即擁有在該網誌新增或編輯自己所發布的網誌文章權限.</p>
+<p>6. 使用者登入 Google 帳號後, 在 <a data-saferedirecturl="https://www.google.com/url?q=https://console.developers.google.com/&amp;source=gmail&amp;ust=1592028178600000&amp;usg=AFQjCNGEbAaQTMAklMLSpRwoJO3k6IITRg" href="https://console.developers.google.com/" target="_blank">https://console.developers.<wbr/>google.com</a> 中所建立的 Oauth2 client ID, 可以下載存為 client_secrets.json 檔案.</p>
+<p>7. client_secrets.json 檔案則可以透過下列程式, 轉換為 credential_token.dat, 使用者針對特定啟用的 API 程式庫, 可以在讀取 credential_token.dat 的情況下, 取得與登入 Gmail 帳號相同的使用授權, 直接在擁有權限的 blog_id 中新增特定的文章 (並以特定的 post_id 辨識).</p>
+<div>
+<div id="m_-4017000464414909426m_-2018323386028382460gmail-highlighter_296901">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+<div>6</div>
+<div>7</div>
+<div>8</div>
+<div>9</div>
+<div>10</div>
+<div>11</div>
+<div>12</div>
+<div>13</div>
+<div>14</div>
+<div>15</div>
+<div>16</div>
+<div>17</div>
+<div>18</div>
+<div>19</div>
+<div>20</div>
+<div>21</div>
+<div>22</div>
+<div>23</div>
+<div>24</div>
+</td>
+<td>
+<div>
+<div><code>@language</code> <code>python</code></div>
+<div><code>#<span> </span><a data-saferedirecturl="https://www.google.com/url?q=https://developers.google.com/blogger/docs/3.0/using&amp;source=gmail&amp;ust=1592028178600000&amp;usg=AFQjCNHlgDFbWIFewbqXKIUwaZPAezB5vg" href="https://developers.google.com/blogger/docs/3.0/using" target="_blank">https://developers.google.com/<wbr/>blogger/docs/3.0/using</a></code></div>
+<div><code># under Mac command + b to execute</code></div>
+<div><code>import</code> <code>pickle</code></div>
+<div><code>import</code> <code>os</code></div>
+<div><code>from</code> <code>googleapiclient.<wbr/>discovery </code><code>import</code> <code>build</code></div>
+<div><code>from</code> <code>google_auth_oauthlib.<wbr/>flow </code><code>import</code> <code>InstalledAppFlow</code></div>
+<div> </div>
+<div> </div>
+<div><code>SCOPES </code><code>=</code> <code>[</code><code>'<a data-saferedirecturl="https://www.google.com/url?q=https://www.googleapis.com/auth/blogger&amp;source=gmail&amp;ust=1592028178600000&amp;usg=AFQjCNG4JFQzwQXWKB7G22y-xRGLVF5lvQ" href="https://www.googleapis.com/auth/blogger" target="_blank">https://www.<wbr/>googleapis.com/auth/blogger</a>'</code><code>, ]</code></div>
+<div> </div>
+<div><code># we check if the file tBo store the credentials exists</code></div>
+<div><code>if</code> <code>not</code> <code>os.path.exists(</code><code>'./../..<wbr/>/yen_gm_blogger_token.dat'</code><code>):</code></div>
+<div> </div>
+<div><code>    </code><code>flow </code><code>=</code> <code>InstalledAppFlow.<wbr/>from_client_secrets_file(</code><code>'./..<wbr/>/../yen_gm_blogger_secrets.<wbr/>json'</code><code>, SCOPES)</code></div>
+<div><code>    </code><code>credentials </code><code>=</code> <code>flow.run_<wbr/>local_server()</code></div>
+<div> </div>
+<div><code>    </code><code>with </code><code>open</code><code>(</code><code>'./../../yen_gm_<wbr/>blogger_token.dat'</code><code>, </code><code>'wb'</code><code>) as credentials_dat:</code></div>
+<div><code>        </code><code>pickle.dump(<wbr/>credentials, credentials_dat)</code></div>
+<div><code>else</code><code>:</code></div>
+<div><code>    </code><code>with </code><code>open</code><code>(</code><code>'./../../yen_gm_<wbr/>blogger_token.dat'</code><code>, </code><code>'rb'</code><code>) as credentials_dat:</code></div>
+<div><code>        </code><code>credentials </code><code>=</code> <code>pickle.<wbr/>load(credentials_dat)</code></div>
+<div><code>service </code><code>=</code> <code>build(</code><code>'blogger'</code><code>, </code><code>'<wbr/>v3'</code><code>, credentials</code><code>=</code><code>credentials)</code></div>
+<div><code><a data-saferedirecturl="https://www.google.com/url?q=http://g.es&amp;source=gmail&amp;ust=1592028178600000&amp;usg=AFQjCNFTXhwb5hEq9YIT-4Ist08uJ05RyA" href="http://g.es/" target="_blank">g.es</a>(service)</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br />Week 8 << <a href='Week 8.html'>Previous</a> <a href='Week 12.html'>Next</a> >> Week 12</div>
         
     <!-- footer -->
       <div class="container">
